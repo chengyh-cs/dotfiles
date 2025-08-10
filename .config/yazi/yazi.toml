@@ -1,0 +1,19 @@
+[opener]
+text = [
+    { run = 'nvim "$@"', block = true, for = "unix" },
+    { run = 'notepad.exe "$@"', block = true, for = "windows" },
+]
+default = [
+    { run = 'open "$@"', for = "unix" },
+    { run = 'start "" "$@"', for = "windows" },
+]
+
+[open]
+prepend_rules = [
+    { name = "*.{py,js,ts,html,css,json,xml,yaml,yml,md,sh,bash,zsh,toml,conf,vim,lua,c,cpp,h,hpp,go,rs,java,php,rb,pl,swift,kt,dart,jsonc,jsx,tsx}", use = "text" },
+    { mime = "text/*", use = "text" },
+]
+rules = [
+    { mime = "text/*", use = "text" },
+    { mime = "*", use = "default" },
+]
