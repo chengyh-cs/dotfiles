@@ -54,7 +54,7 @@ alias cl='clear'
 alias yy='yazi'
 alias nv='nvim'
 alias ls='eza'
-alias lz='lazygit'
+alias lg='lazygit'
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'     # git bare repository
 
 export NVM_DIR="$HOME/.nvm"
